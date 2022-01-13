@@ -39,34 +39,87 @@
 </nav>
 
 
-<!--- Declaramos la canion que deseamos reproducir---->
- <audio src="Cancion.mp3" id="music"></audio>
 
- <!--- Botones para interactuar la cancion---->
- <div>
-  <button onclick="document.getElementById('music').play()">Play</button>
-  <button onclick="document.getElementById('music').pause()">Pause</button>
-  <button onclick="document.getElementById('music').load()">Reload</button>
-  <button onclick="document.getElementById('music').stop()">Stop</button>
-  <button onclick="document.getElementById('music').volume += .1">Subir</button>
-  <button onclick="document.getElementById('music').volume -= .1">Bajar</button>
- 
- </div>
+<!-- Boton que muestra el modal I -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Practica I
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+            <div class="modal-body">
 
-<!----Reproducir video----->
- <hr />
-  <h2>Video</h2>
+              <h3>Práctica I - Reproductor de Música</h3><br>
 
-  <video width="320" height="240" id="videos">
-    <source src="Musica.mp4" type="video/mp4">
-  </video>
-  <div>
-    <button onclick="playPause()">Reproducir/Pausar</button>
-    <button onclick="stop()">Detener</button>
-    <button onclick="skip(-10)">Retroceder</button>
-    <button onclick="skip(10)">Adelantar</button>
+              <!--- Declaramos la canion que deseamos reproducir---->
+            <audio src="Cancion.mp3" id="music"></audio>
+
+              <!--- Botones para interactuar la cancion---->
+            <div>
+                <button onclick="document.getElementById('music').play()">Play</button>
+                <button onclick="document.getElementById('music').pause()">Pause</button>
+                <button onclick="document.getElementById('music').load()">Reload</button>
+                <button onclick="document.getElementById('music').stop()">Stop</button>
+                <button onclick="document.getElementById('music').volume += .1">Subir</button>
+                <button onclick="document.getElementById('music').volume -= .1">Bajar</button>
+            </div>
+
+         </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
+</div>
+
+
+
+<!-- Boton que muestra el modal de la practica II -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Practica II
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+            <div class="modal-body">
+
+              <h3>Práctica II  - Reproductor de Video </h3><br>
+                     <!----Reproducir video----->
+               <hr />
+               <h2>Video</h2>
+
+               <video width="320" height="240" id="videos">
+                <source src="Musica.mp4" type="video/mp4">
+              </video>
+               <div>
+                   <button onclick="playPause()">Reproducir/Pausar</button>
+                   <button onclick="stop()">Detener</button>
+                   <button onclick="skip(-10)">Retroceder</button>
+                   <button onclick="skip(10)">Adelantar</button>
+                </div>
+         </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 
 </body>
