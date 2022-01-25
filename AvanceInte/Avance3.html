@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="menuContainer"></div>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Integradora <br />5-TID1</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="Avance.html" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Area I Estacionamiento</span>
+          </a>
+        </li>
+        <li>
+          <a href="Avance2.html" class="active">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Area II Comercial</span>
+          </a>
+        </li>
+        <li>
+          <a href="Avance3.html" class="active">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Area III Entretenimiento</span>
+          </a>
+        </li>
+        <li>
+          <a href="Avance4.html" class="active">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Area IV Comida</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Estadisticas de los sensores Entretenimiento</span>
+      </div>
+    </nav>
+  <section class="home-section">
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Mesas disponibles</div>
+            <div class="number"> 9/15</div>
+            <div class="indicator">  
+            Sensor de proximidad        
+            </div>
+          </div>
+          <i class='bx bx-info-square cart' onclick="alert('las zonas esta en amarillo');"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Control de luces</div>
+            <div class="number">13/20</div>
+            <div class="indicator">  
+            Fotoresistencia         
+            </div>
+          </div>
+          <i class='bx bx-info-square cart' onclick="alert('Las luces estan encendidas');"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Temperatura - Humedad</div>
+            <div class="number">25°,35%</div>
+            <div class="indicator">  
+            Temperatura - Humedad         
+            </div>
+          </div>
+          <i class='bx bx-info-square cart' onclick="alert('La zona esta en verde');"></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Alarma de Humo</div>
+            <div class="number">Activa</div>
+            <div class="indicator">  
+            Sensor de Humo         
+            </div>
+          </div>
+          <i class='bx bx-info-square cart' onclick="alert('El area no esta en peligro');"></i>
+        </div>
+
+    </div>
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+   let sidebarBtn = document.querySelector(".sidebarBtn");
+   sidebarBtn.onclick = function() {
+    sidebar.classList.toggle("active");
+    if(sidebar.classList.contains("active")){
+      sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+    }else
+    sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+  }
+</script>
+<script type="text/javascript">
+function actualizar(){
+  location.reload(true);
+}
+  setInterval("actualizar()",5000);
+</script>
+<script>
+    $(document).ready(function () {
+      $('.menuContainer').load('menu.html');
+    });
+  </script>
+</body>
+</html>
